@@ -1,1 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certification Exam — Void Mods</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Certification Exam</h1>
+    <nav><a href="./index.html">Home</a> · <a href="./training.html">Training</a> · <a href="./quiz.html">Practice Quiz</a></nav>
+  </header>
 
+  <main class="cert">
+    <section id="certIntro">
+      <p>This exam contains 20 scenario-based prompts. Keyword detection scoring will be used. Anti-cheat protections are active: copy/paste disabled, right-click disabled, and a refresh warning will appear.</p>
+      <label>
+        Your name:
+        <input id="certName" type="text" placeholder="Full name" />
+      </label>
+      <button id="startCertBtn" class="btn">Start Exam</button>
+    </section>
+
+    <section id="examArea" style="display:none;">
+      <div id="scenarioBox"></div>
+      <textarea id="answerBox" placeholder="Type your response here..." rows="8"></textarea>
+      <div class="quiz-controls">
+        <button id="prevScenario" class="btn">Previous</button>
+        <button id="nextScenario" class="btn">Next</button>
+        <button id="submitCertBtn" class="btn">Submit Exam</button>
+      </div>
+    </section>
+
+    <section id="certResult" style="display:none;">
+      <h2>Submission Received</h2>
+      <p id="certScoreText"></p>
+      <p id="certStatusText"></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="./js/supabase.js"></script>
+  <script src="./js/cert.js"></script>
+</body>
+</html>
