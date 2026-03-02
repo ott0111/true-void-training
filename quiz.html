@@ -1,1 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Practice Quiz — Void Mods</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Practice Quiz</h1>
+    <nav><a href="./index.html">Home</a> · <a href="./training.html">Training</a> · <a href="./cert.html">Certification</a></nav>
+  </header>
 
+  <main class="quiz">
+    <section id="intro">
+      <p>30 multiple-choice questions. Score ≥ 70% to unlock the certification exam.</p>
+      <label>
+        Your name:
+        <input id="participantName" type="text" placeholder="Full name" />
+      </label>
+      <button id="startBtn" class="btn">Start Quiz</button>
+    </section>
+
+    <section id="quizArea" style="display:none;">
+      <div id="questionBox"></div>
+      <div id="choices"></div>
+      <div class="quiz-controls">
+        <button id="prevBtn" class="btn">Previous</button>
+        <button id="nextBtn" class="btn">Next</button>
+        <button id="submitQuizBtn" class="btn">Submit Quiz</button>
+      </div>
+    </section>
+
+    <section id="resultArea" style="display:none;">
+      <h2>Results</h2>
+      <p id="scoreText"></p>
+      <p id="unlockText"></p>
+      <a id="goToCert" href="./cert.html" style="display:none;" class="btn">Proceed to Certification</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="./js/supabase.js"></script>
+  <script src="./js/quiz.js"></script>
+</body>
+</html>
