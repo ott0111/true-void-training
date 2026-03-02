@@ -1,1 +1,7 @@
-
+/* Admin-specific styles */
+.admin-wrap{max-width:1100px;margin:20px auto;background:#071022;padding:18px;border-radius:8px;color:var(--text)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:10px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.status-approved{color:#6ee7b7}
+.status-denied{color:#ff7b7b}
+.controls{display:flex;gap:8px}
